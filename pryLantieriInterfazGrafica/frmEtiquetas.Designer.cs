@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEtiquetas));
             lblTitulo = new Label();
             lblNombre = new Label();
             lblApellido = new Label();
@@ -97,35 +98,38 @@
             txtNombre.Location = new Point(166, 47);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(136, 27);
-            txtNombre.TabIndex = 5;
-            txtNombre.TextAlign = HorizontalAlignment.Center;
+            txtNombre.TabIndex = 1;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // txtApellido
             // 
+            txtApellido.Enabled = false;
             txtApellido.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
             txtApellido.Location = new Point(166, 85);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(136, 27);
-            txtApellido.TabIndex = 6;
-            txtApellido.TextAlign = HorizontalAlignment.Center;
+            txtApellido.TabIndex = 2;
+            txtApellido.TextChanged += txtApellido_TextChanged;
             // 
             // txtEdad
             // 
+            txtEdad.Enabled = false;
             txtEdad.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
             txtEdad.Location = new Point(166, 121);
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(27, 27);
-            txtEdad.TabIndex = 7;
-            txtEdad.TextAlign = HorizontalAlignment.Center;
+            txtEdad.TabIndex = 3;
+            txtEdad.TextChanged += txtEdad_TextChanged_1;
             // 
             // txtCarrera
             // 
+            txtCarrera.Enabled = false;
             txtCarrera.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
             txtCarrera.Location = new Point(166, 157);
             txtCarrera.Name = "txtCarrera";
             txtCarrera.Size = new Size(136, 27);
-            txtCarrera.TabIndex = 8;
-            txtCarrera.TextAlign = HorizontalAlignment.Center;
+            txtCarrera.TabIndex = 4;
+            txtCarrera.TextChanged += txtCarrera_TextChanged_1;
             // 
             // lblMensaje
             // 
@@ -138,6 +142,7 @@
             // 
             // btnPresentar
             // 
+            btnPresentar.Enabled = false;
             btnPresentar.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPresentar.Location = new Point(177, 201);
             btnPresentar.Name = "btnPresentar";
@@ -145,13 +150,14 @@
             btnPresentar.TabIndex = 10;
             btnPresentar.Text = "Presentar";
             btnPresentar.UseVisualStyleBackColor = true;
-            btnPresentar.Click += btnPresentar_Click_1;
+            btnPresentar.Click += btnPresentar_Click;
             // 
             // frmEtiquetas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(490, 313);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(473, 313);
             Controls.Add(btnPresentar);
             Controls.Add(lblMensaje);
             Controls.Add(txtCarrera);
@@ -163,6 +169,7 @@
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
             Controls.Add(lblTitulo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEtiquetas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " Interfaz Gráfica - Etiquetas/Label";
