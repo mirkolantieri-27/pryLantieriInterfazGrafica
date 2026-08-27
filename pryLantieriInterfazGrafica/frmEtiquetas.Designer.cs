@@ -45,18 +45,22 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(156, 9);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Times New Roman", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.Menu;
+            lblTitulo.Location = new Point(136, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(146, 27);
+            lblTitulo.Size = new Size(218, 43);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "Presentación";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(66, 49);
+            lblNombre.ForeColor = Color.White;
+            lblNombre.Location = new Point(97, 69);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(77, 21);
             lblNombre.TabIndex = 1;
@@ -65,8 +69,10 @@
             // lblApellido
             // 
             lblApellido.AutoSize = true;
+            lblApellido.BackColor = Color.Transparent;
             lblApellido.Font = new Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblApellido.Location = new Point(66, 84);
+            lblApellido.ForeColor = Color.White;
+            lblApellido.Location = new Point(97, 104);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(79, 21);
             lblApellido.TabIndex = 2;
@@ -75,8 +81,10 @@
             // lblEdad
             // 
             lblEdad.AutoSize = true;
+            lblEdad.BackColor = Color.Transparent;
             lblEdad.Font = new Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEdad.Location = new Point(89, 123);
+            lblEdad.ForeColor = Color.White;
+            lblEdad.Location = new Point(120, 143);
             lblEdad.Name = "lblEdad";
             lblEdad.Size = new Size(54, 21);
             lblEdad.TabIndex = 3;
@@ -85,8 +93,10 @@
             // lblCarrera
             // 
             lblCarrera.AutoSize = true;
+            lblCarrera.BackColor = Color.Transparent;
             lblCarrera.Font = new Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCarrera.Location = new Point(72, 156);
+            lblCarrera.ForeColor = Color.White;
+            lblCarrera.Location = new Point(103, 176);
             lblCarrera.Name = "lblCarrera";
             lblCarrera.Size = new Size(71, 21);
             lblCarrera.TabIndex = 4;
@@ -95,7 +105,7 @@
             // txtNombre
             // 
             txtNombre.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
-            txtNombre.Location = new Point(166, 47);
+            txtNombre.Location = new Point(180, 63);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(136, 27);
             txtNombre.TabIndex = 1;
@@ -105,7 +115,7 @@
             // 
             txtApellido.Enabled = false;
             txtApellido.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
-            txtApellido.Location = new Point(166, 85);
+            txtApellido.Location = new Point(180, 101);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(136, 27);
             txtApellido.TabIndex = 2;
@@ -115,7 +125,7 @@
             // 
             txtEdad.Enabled = false;
             txtEdad.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
-            txtEdad.Location = new Point(166, 121);
+            txtEdad.Location = new Point(180, 137);
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(27, 27);
             txtEdad.TabIndex = 3;
@@ -125,7 +135,7 @@
             // 
             txtCarrera.Enabled = false;
             txtCarrera.Font = new Font("Yu Gothic", 9F, FontStyle.Bold);
-            txtCarrera.Location = new Point(166, 157);
+            txtCarrera.Location = new Point(180, 173);
             txtCarrera.Name = "txtCarrera";
             txtCarrera.Size = new Size(136, 27);
             txtCarrera.TabIndex = 4;
@@ -134,7 +144,9 @@
             // lblMensaje
             // 
             lblMensaje.AutoSize = true;
+            lblMensaje.BackColor = Color.Transparent;
             lblMensaje.Font = new Font("Yu Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMensaje.ForeColor = Color.White;
             lblMensaje.Location = new Point(12, 255);
             lblMensaje.Name = "lblMensaje";
             lblMensaje.Size = new Size(0, 17);
@@ -142,14 +154,16 @@
             // 
             // btnPresentar
             // 
+            btnPresentar.BackColor = Color.DarkSlateGray;
             btnPresentar.Enabled = false;
             btnPresentar.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPresentar.Location = new Point(177, 201);
+            btnPresentar.ForeColor = Color.White;
+            btnPresentar.Location = new Point(191, 217);
             btnPresentar.Name = "btnPresentar";
             btnPresentar.Size = new Size(110, 36);
             btnPresentar.TabIndex = 10;
             btnPresentar.Text = "Presentar";
-            btnPresentar.UseVisualStyleBackColor = true;
+            btnPresentar.UseVisualStyleBackColor = false;
             btnPresentar.Click += btnPresentar_Click;
             // 
             // frmEtiquetas
@@ -157,6 +171,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = Properties.Resources.fondo5;
             ClientSize = new Size(473, 313);
             Controls.Add(btnPresentar);
             Controls.Add(lblMensaje);
@@ -172,7 +187,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmEtiquetas";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " Interfaz Gráfica - Etiquetas/Label";
+            Text = "Caso 1 - Presentación Personal";
             Load += frmEtiquetas_Load;
             ResumeLayout(false);
             PerformLayout();

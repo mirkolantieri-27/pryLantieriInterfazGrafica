@@ -28,9 +28,18 @@ namespace pryLantieriInterfazGrafica
             string edad = txtEdad.Text;
             string carrera = txtCarrera.Text;
 
+
+
             //Mensaje
             lblMensaje.Text = $"Hola, soy {nombre} {apellido}, tengo {edad} años y estudio {carrera}.";
 
+
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtEdad.Clear();
+            txtCarrera.Clear();
+
+            txtNombre.Focus();
         }
 
 
