@@ -41,61 +41,66 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(229, 19);
+            lblTitulo.Font = new Font("Yu Gothic", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(174, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(38, 15);
+            lblTitulo.Size = new Size(143, 38);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "label1";
+            lblTitulo.Text = "AGENDA";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(125, 72);
+            lblNombre.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold);
+            lblNombre.Location = new Point(97, 64);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(38, 15);
+            lblNombre.Size = new Size(91, 25);
             lblNombre.TabIndex = 1;
-            lblNombre.Text = "label2";
+            lblNombre.Text = "Nombre:";
             // 
             // lblTelefono
             // 
             lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(125, 121);
+            lblTelefono.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold);
+            lblTelefono.Location = new Point(143, 116);
             lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(38, 15);
+            lblTelefono.Size = new Size(45, 25);
             lblTelefono.TabIndex = 2;
-            lblTelefono.Text = "label3";
+            lblTelefono.Text = "Tel:";
             lblTelefono.Click += label3_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(203, 64);
+            textBox1.Location = new Point(194, 64);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(203, 118);
+            textBox2.Location = new Point(194, 118);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 4;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(125, 178);
+            btnAgregar.Font = new Font("Yu Gothic Medium", 12F, FontStyle.Bold);
+            btnAgregar.Location = new Point(125, 168);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.Size = new Size(104, 43);
             btnAgregar.TabIndex = 5;
-            btnAgregar.Text = "button1";
+            btnAgregar.Text = "AGREGAR";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(242, 178);
+            btnEliminar.Font = new Font("Yu Gothic Medium", 12F, FontStyle.Bold);
+            btnEliminar.Location = new Point(257, 168);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.Size = new Size(104, 43);
             btnEliminar.TabIndex = 6;
-            btnEliminar.Text = "button2";
+            btnEliminar.Text = "ELIMINAR";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
             // lstContactos
