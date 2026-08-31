@@ -37,45 +37,50 @@
             txtValor = new TextBox();
             cmoDesde = new ComboBox();
             cmoHacia = new ComboBox();
+            txtResult = new TextBox();
             SuspendLayout();
             // 
             // lblValor
             // 
             lblValor.AutoSize = true;
-            lblValor.Font = new Font("Yu Gothic", 12F, FontStyle.Bold);
-            lblValor.Location = new Point(89, 84);
+            lblValor.BackColor = Color.Transparent;
+            lblValor.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold);
+            lblValor.Location = new Point(93, 87);
             lblValor.Name = "lblValor";
-            lblValor.Size = new Size(54, 21);
+            lblValor.Size = new Size(69, 27);
             lblValor.TabIndex = 0;
             lblValor.Text = "Valor:";
             // 
             // lblDesde
             // 
             lblDesde.AutoSize = true;
-            lblDesde.Font = new Font("Yu Gothic", 12F, FontStyle.Bold);
-            lblDesde.Location = new Point(79, 136);
+            lblDesde.BackColor = Color.Transparent;
+            lblDesde.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold);
+            lblDesde.Location = new Point(76, 134);
             lblDesde.Name = "lblDesde";
-            lblDesde.Size = new Size(64, 21);
+            lblDesde.Size = new Size(82, 27);
             lblDesde.TabIndex = 1;
             lblDesde.Text = "Desde:";
             // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
-            lblResultado.Font = new Font("Yu Gothic", 12F, FontStyle.Bold);
-            lblResultado.Location = new Point(50, 267);
+            lblResultado.BackColor = Color.Transparent;
+            lblResultado.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold);
+            lblResultado.Location = new Point(45, 270);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(93, 21);
+            lblResultado.Size = new Size(120, 27);
             lblResultado.TabIndex = 2;
             lblResultado.Text = "Resultado:";
             // 
             // lblHacia
             // 
             lblHacia.AutoSize = true;
-            lblHacia.Font = new Font("Yu Gothic", 12F, FontStyle.Bold);
-            lblHacia.Location = new Point(89, 177);
+            lblHacia.BackColor = Color.Transparent;
+            lblHacia.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold);
+            lblHacia.Location = new Point(82, 178);
             lblHacia.Name = "lblHacia";
-            lblHacia.Size = new Size(59, 21);
+            lblHacia.Size = new Size(76, 27);
             lblHacia.TabIndex = 3;
             lblHacia.Text = "Hacia:";
             // 
@@ -98,6 +103,7 @@
             btnConvertir.TabIndex = 5;
             btnConvertir.Text = "CONVERTIR";
             btnConvertir.UseVisualStyleBackColor = true;
+            btnConvertir.Click += btnConvertir_Click;
             // 
             // txtValor
             // 
@@ -111,25 +117,40 @@
             // 
             cmoDesde.Font = new Font("Yu Gothic Medium", 11.25F, FontStyle.Bold);
             cmoDesde.FormattingEnabled = true;
+            cmoDesde.Items.AddRange(new object[] { "Milímetros", "Centímetros", "Metros", "Kilómetros", "Hectómetro" });
             cmoDesde.Location = new Point(159, 134);
             cmoDesde.Name = "cmoDesde";
             cmoDesde.Size = new Size(121, 27);
             cmoDesde.TabIndex = 7;
+            cmoDesde.SelectedIndexChanged += cmoDesde_SelectedIndexChanged;
             // 
             // cmoHacia
             // 
             cmoHacia.Font = new Font("Yu Gothic Medium", 11.25F, FontStyle.Bold);
             cmoHacia.FormattingEnabled = true;
+            cmoHacia.Items.AddRange(new object[] { "Milímetros", "Centímetros", "Metros", "Kilómetros", "Hectómetro" });
             cmoHacia.Location = new Point(159, 178);
             cmoHacia.Name = "cmoHacia";
             cmoHacia.Size = new Size(121, 27);
             cmoHacia.TabIndex = 8;
             // 
+            // txtResult
+            // 
+            txtResult.BackColor = Color.White;
+            txtResult.Font = new Font("Yu Gothic Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtResult.Location = new Point(168, 264);
+            txtResult.Name = "txtResult";
+            txtResult.ReadOnly = true;
+            txtResult.Size = new Size(100, 33);
+            txtResult.TabIndex = 9;
+            // 
             // frmConversorUnidades
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(401, 358);
+            Controls.Add(txtResult);
             Controls.Add(cmoHacia);
             Controls.Add(cmoDesde);
             Controls.Add(txtValor);
@@ -156,5 +177,6 @@
         private TextBox txtValor;
         private ComboBox cmoDesde;
         private ComboBox cmoHacia;
+        private TextBox txtResult;
     }
 }

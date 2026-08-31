@@ -40,12 +40,15 @@
             txtN1 = new TextBox();
             txtN2 = new TextBox();
             txtResult = new TextBox();
+            btnBorrar = new Button();
             SuspendLayout();
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Yu Gothic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.BackColor = Color.Black;
+            lblTitulo.Font = new Font("Yu Gothic", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(93, 9);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(291, 45);
@@ -55,31 +58,36 @@
             // lblNum1
             // 
             lblNum1.AutoSize = true;
-            lblNum1.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold);
-            lblNum1.Location = new Point(76, 76);
+            lblNum1.BackColor = Color.Black;
+            lblNum1.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblNum1.ForeColor = Color.White;
+            lblNum1.Location = new Point(63, 81);
             lblNum1.Name = "lblNum1";
-            lblNum1.Size = new Size(107, 25);
+            lblNum1.Size = new Size(116, 27);
             lblNum1.TabIndex = 1;
             lblNum1.Text = "Número 1:";
-           
             // 
             // lblNum2
             // 
             lblNum2.AutoSize = true;
-            lblNum2.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold);
-            lblNum2.Location = new Point(76, 121);
+            lblNum2.BackColor = Color.Black;
+            lblNum2.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblNum2.ForeColor = Color.White;
+            lblNum2.Location = new Point(63, 126);
             lblNum2.Name = "lblNum2";
-            lblNum2.Size = new Size(107, 25);
+            lblNum2.Size = new Size(116, 27);
             lblNum2.TabIndex = 2;
             lblNum2.Text = "Número 2:";
             // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
-            lblResultado.Font = new Font("Yu Gothic", 14.25F, FontStyle.Bold);
-            lblResultado.Location = new Point(76, 225);
+            lblResultado.BackColor = Color.Black;
+            lblResultado.Font = new Font("Yu Gothic", 15.75F, FontStyle.Bold | FontStyle.Italic);
+            lblResultado.ForeColor = Color.White;
+            lblResultado.Location = new Point(63, 230);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(110, 25);
+            lblResultado.Size = new Size(120, 27);
             lblResultado.TabIndex = 3;
             lblResultado.Text = "Resultado:";
             // 
@@ -92,6 +100,7 @@
             btnSuma.TabIndex = 4;
             btnSuma.Text = "+";
             btnSuma.UseVisualStyleBackColor = true;
+            btnSuma.Click += btnSuma_Click;
             // 
             // btnResta
             // 
@@ -102,6 +111,7 @@
             btnResta.TabIndex = 5;
             btnResta.Text = "-";
             btnResta.UseVisualStyleBackColor = true;
+            btnResta.Click += btnResta_Click;
             // 
             // btnMultiplicar
             // 
@@ -112,6 +122,7 @@
             btnMultiplicar.TabIndex = 6;
             btnMultiplicar.Text = "x";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += btnMultiplicar_Click;
             // 
             // btnDivision
             // 
@@ -122,6 +133,7 @@
             btnDivision.TabIndex = 7;
             btnDivision.Text = "÷";
             btnDivision.UseVisualStyleBackColor = true;
+            btnDivision.Click += btnDivision_Click;
             // 
             // txtN1
             // 
@@ -142,18 +154,34 @@
             // 
             // txtResult
             // 
+            txtResult.BackColor = SystemColors.ActiveCaption;
             txtResult.Font = new Font("Yu Gothic Medium", 11.25F, FontStyle.Bold);
             txtResult.Location = new Point(189, 225);
             txtResult.Name = "txtResult";
+            txtResult.ReadOnly = true;
             txtResult.Size = new Size(100, 32);
             txtResult.TabIndex = 10;
+            // 
+            // btnBorrar
+            // 
+            btnBorrar.Font = new Font("Yu Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBorrar.Location = new Point(321, 225);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(48, 32);
+            btnBorrar.TabIndex = 11;
+            btnBorrar.Text = "CE";
+            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // frmCalculadoraBasica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(463, 300);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(463, 307);
+            Controls.Add(btnBorrar);
             Controls.Add(txtResult);
             Controls.Add(txtN2);
             Controls.Add(txtN1);
@@ -167,6 +195,7 @@
             Controls.Add(lblTitulo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmCalculadoraBasica";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Caso 2 - Calculadora Básica";
             ResumeLayout(false);
             PerformLayout();
@@ -185,5 +214,6 @@
         private TextBox txtN1;
         private TextBox txtN2;
         private TextBox txtResult;
+        private Button btnBorrar;
     }
 }

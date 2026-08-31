@@ -14,5 +14,15 @@ namespace pryLantieriInterfazGrafica
         {
             InitializeComponent();
         }
+
+        private void cmoDesde_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConvertir_Click(object sender, EventArgs e)
+        {
+            
+            }
+        }
     }
-}
